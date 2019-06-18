@@ -1,7 +1,7 @@
 <?php 
-    namespace Source\BBBootstrapOld;
+    namespace Source\BBBootstrap    ;
 
-    class Thumbnails extends Grid{
+    class Thumbnails {
 
             private static $imgSrc;
             private static $urlSrc;
@@ -19,9 +19,9 @@
                 $sizeTypes = $reflection->getConstants();
                
                 $target = ($target==false) ? '' : "target='_blank'";
-                self::$sizeTypeX = (!empty($sizeTypeX) || in_array($sizeTypeX, $sizeTypes) ? "{$sizeTypeX}" : parent::X6);
+                self::$sizeTypeX = (!empty($sizeTypeX) || in_array($sizeTypeX, $sizeTypes) ? "{$sizeTypeX}" : Grid::X6);
                 self::$sizeTypeS = (!empty($sizeTypeS) || in_array($sizeTypeS, $sizeTypes) ? " {$sizeTypeS}" : "");
-                self::$sizeTypeM = (!empty($sizeTypeM) || in_array($sizeTypeM, $sizeTypes) ? " {$sizeTypeM}" : " " .parent::M3);
+                self::$sizeTypeM = (!empty($sizeTypeM) || in_array($sizeTypeM, $sizeTypes) ? " {$sizeTypeM}" : " " . Grid::M3);
                 self::$sizeTypeL = (!empty($sizeTypeL) && in_array($sizeTypeL, $sizeTypes) ? " {$sizeTypeL}" : "");
 
                 self::$thumb = "<div class=\"row\">";
